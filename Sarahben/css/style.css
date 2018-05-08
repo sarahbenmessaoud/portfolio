@@ -1,0 +1,295 @@
+body,html, h1, h2, h3, h4, p{
+  margin:0;
+  padding:0;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+body{
+  border-left: 20px black solid;
+  margin-top: 0;
+  height:100vh;
+  width: 100vw;
+}
+main > section:nth-child(1) a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  float:right;
+  padding: 0.7em 1.5em;
+  margin: 1em 1em 0 0;
+}
+
+main > section:nth-child(1) a:hover{
+  background-color: black;
+  color: white;
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+p{
+  letter-spacing: 0.3px;
+}
+/*Homepage*/
+h1{
+  font-size: 4.5em;
+  font-weight:900;
+}
+h2{
+  font-size: 2.5em;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+}
+h3{
+  font-size: 2em;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+
+}
+.intro p{
+max-width: 60%;
+}
+/*Navigation*/
+nav{
+  display: inherit;
+  justify-content: flex-end;
+  z-index: 1;
+  margin-top: 1em;
+}
+nav ul li{
+  list-style: none;
+  border: 3px solid black;
+  width: 40vw;
+  padding: 1.8em;
+  background-color: white;
+}
+nav ul li:hover:after{
+  content: "\f061";
+  display: inline-block;
+  position: relative;
+  color:red;
+  margin-left:1em;
+}
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+footer section{
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em 0 0 2.25em;
+}
+footer section:first-child a{
+  text-decoration: none;
+  margin-bottom: 0.4em;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+footer section:last-child{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 300;
+}
+footer section:last-child p{
+  font-size: 0.9em;
+}
+footer section:last-child p:last-of-type{
+  padding: 0em 1em;
+}
+/*hoverstate*/
+nav ul li:nth-of-type(1):hover:after{
+  content: "I am soon live";
+}
+nav ul li:nth-of-type(2):hover:after{
+  content: "No really, I'm working on it";
+}
+nav ul li:nth-of-type(3):hover:after{
+  content: "Look this is me working on it 🖥️ 🐒";
+}
+a.email:before,a.mobile:before,a.address:before{
+   font-family: FontAwesome;
+   display: inline-block;
+   font-size: 12px;
+   vertical-align: middle;
+   padding-right: 1.25em;
+}
+a.instagram:before, a.linkedin:before, nav ul li:after{
+     font-family: FontAwesome;
+     display: inline-block;
+     font-size: 1em;
+     color: black;
+}
+footer section article{
+margin-right: 1.5em;
+}
+a.mobile:before {content: "\f095";}
+a.email:before {content: "\f003";}
+a.address:before {content: "\f041";}
+a.instagram:before{
+  content: "\f16d";
+  padding-left: 1em;
+}
+a.linkedin:before{content: "\f0e1";}
+/*Media queries*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+  body{
+    border: none;
+    margin: 0;
+  }
+  h1{
+    font-size: 3em;
+    margin-top: -0.5em;
+  }
+  h2{
+    font-size: 1.5em;
+  }
+  h3{
+    font-size: 1.5em;
+  }
+  .intro p{
+  margin-top: 0.5em;
+  max-width: 90%;
+  }
+  main{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  }
+  main > section:nth-child(1) a{
+    margin: 1em 0.5em 0 0;
+  }
+  main > section:nth-child(2){
+    margin:1em 0 0 1.1em;
+  }
+  nav{
+    display:block;
+    z-index: 1;
+    margin-top: 1em;
+  }
+  nav ul {
+    display: block;
+    padding: 0;
+  }
+  nav ul li{
+    list-style: none;
+    border: 3px solid black;
+    background-color: white;
+    text-align: left;
+    width: 83vw;
+    margin: auto;
+    padding: 0.7em;
+  }
+    nav ul li a{
+      font-size: 1.5em;
+    }
+  /*Footer*/
+  footer{
+      background-color: #F73939;
+      width: 90vw;
+      margin: auto;
+      height: 30vh;
+      box-shadow: 0px 100px 0px 50px rgba(0,0,0,1);
+  }
+  footer p{
+    display: none;
+  }
+  footer article{
+    justify-content: space-around ;
+    font-size: 1.5em;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 700px) {
+  body{
+    border-color: black;
+    margin: 0;
+  }
+  /*Navigation*/
+  nav{
+    display: inherit;
+    justify-content: flex-end;
+    z-index: 1;
+  }
+  nav ul li{
+    width: 50vw;
+    padding: 1.5em;
+    margin-bottom: 0;
+  }
+  nav ul li a{
+    font-size: 1.5em;
+  }
+  main > section:nth-child(2){
+    margin-left: 2.4em;
+  }
+  main > section:nth-child(1) a{
+    padding: 0.7em 1.5em;
+    margin: 1em 1em 0 0;
+  }
+  /*Footer*/
+  footer{
+      background-color: #F73939;
+      width: 60vw;
+      height: 30vh;
+      box-shadow: -40px 35px 0px 0px rgba(0,0,0,1);
+      position: absolute;
+      bottom: 25px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+  .intro p{
+  max-width: 80%;
+  }
+  main > section:nth-child(2){
+    margin-left: 2.5em;
+  }
+  nav ul li{
+    width: 50vw;
+    padding: 1.5em;
+  }
+  footer{
+      width: 50vw;
+      height: 30vh;
+  }
+} */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /*About border*/
+  main > section:nth-child(1){
+    border: 3px solid black;
+    height: 90vh;
+    width: 30vw;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    margin-top: 0;
+  }
+  main > section:nth-child(2){
+    margin-top: 3em;
+  }
+  /*Navigation*/
+  nav{
+    display: inherit;
+    margin-right: 10em;
+    z-index: 1;
+  }
+  nav ul li{
+    width: 40vw;
+    padding: 1.5em;
+  }
+  footer{
+      width: 40vw;
+      height: 30vh;
+  }
+
+}
